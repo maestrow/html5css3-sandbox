@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/frontend/app/main.css" />
+    <link rel="stylesheet" href="/frontend/bower_components/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div id="control-panel" class="col-md-3 column">
+			Переключайте стили
+			<div id="styleList" class="nav">
+			</div>
+    </div>
+    <div id="body" class="col-md-9 column">
+			<%- body %>
+		</div>
+  </div>
+</div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script data-main="/frontend/app/main" src="/frontend/bower_components/requirejs/require.js"></script>
+<% scripts.forEach(function (script) { %>
+<script src="<%= script %>"></script>
+<% }) %>
+</body>
+</html>
